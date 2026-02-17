@@ -85,6 +85,8 @@ let eyeColor = "yellow"
 let petWeight = 4.5
 let petBirthday = new Date(2020, 9, 20, 0, 0, 0, 0)
 
+console.log("Something new")
+
 console.log(`Pet name: ${petName.toUpperCase()}\nSpecies: ${petType}
 Pet Color: ${petColor}
 Eyes: ${eyeColor}
