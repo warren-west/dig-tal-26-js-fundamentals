@@ -63,6 +63,7 @@ const ocean = [ '🐟', '🐠', '🐟', '🦈', '🐟', '🐟', '🐟' ]
 
 const fishCollection = ocean.splice(0, 3)
 const secondFishCollection = ocean.splice(1)
+fishCollection.concat(secondFishCollection) // [ '🐟', '🐠', '🐟', '🐟', '🐟', '🐟' ] .push() ->  [ '🐟', '🐠', '🐟', ['🐟', '🐟', '🐟'] ]
 
 // console.log(fishCollection)
 // console.log(ocean)
