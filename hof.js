@@ -37,6 +37,8 @@ const greaterThan40 = (number) => number > 40
 
 // #endregion
 
+// #region FILTER
+
 // Iterator methods (because they iterate through arrays)
 const numbersLT40 = numbers.filter((element) => element < 40)
 const numbersGT40 = numbers.filter((element) => element > 40)
@@ -68,20 +70,81 @@ const longSpecialNumbers = numbers.filter((num, index) => {
 const specialNumbers = numbers
     .filter((num, index) => (index % 2 === 0) === (num % 2 === 0))
 
-console.log(longSpecialNumbers)
-console.log(specialNumbers)
+// console.log(longSpecialNumbers)
+// console.log(specialNumbers)
 
 
 const values = [1, 2, 3, 4, 5, 6];
 
 
 const evenNumbers = values.filter((v) => v % 2 !== 0)
-console.log(evenNumbers) // ?
+// console.log(evenNumbers) // ?
+
+// #endregion
+
+// #region MAP
+
+// .map() is also a helper function that we can use straight from the Array.prototype
+// It will always return a new array with the same number of elements as the original.
+
+
+const numbersToBeDoubled = [ 8, 4, 5, 2, 3, 7 ]
+// doubledNumbers =        [ 16, 8, 10, 4, 6, 14 ]
+// numbersMultipliedByIndex = [0, 4, 10, 6, 12, 35]
+
+// multiplying each element by its index
+const numbersMultipliedByIndex = numbersToBeDoubled.map((num, idx) => num * idx)
+// console.log(numbersMultipliedByIndex)
+
+
+const doubledNumbers = numbersToBeDoubled.map((num) => {
+    // console.log(num) // the current value of num
+    return num * 2 // the result that should be pushed onto the new array
+})
+
+// console.log(doubledNumbers) // the resulting array
+// check that the number of elements is still the same
+// check that the values of the new array are correct (numbers have been doubled)
+
+
+const cars = ['toyota', 'honda', 'citroen', 'renault', 'audi', 'volkswagen' ]
+
+const upperCaseCarsGT6 = cars.map((car) => car.toUpperCase()).filter((car) => car.length > 6)
+
+// console.log(upperCaseCarsGT6) // does it include all the cars? They are all uppercase?
+
+// REFERENCE TO THE FUTURE
+// When we learn how to work with HTML elements in JavaScript, the .map() function gets interesting:
+// const liElements = ['<li>Item 1</li>', '<li>Item 2</li>', '<li>Item 3</li>']
+// const newElements = liElements.map((element) => element.innerText += '<a href=""></a>')
+
+
+// results from converting each car name into the name's length
+// const carNameLengths = [ 6, 5, 7, 7, 4, 10 ]
+const carNameLengths = cars.map((car) => car.length)
+// console.log(carNameLengths)
 
 
 
+// #endregion
 
 
+
+// #region REDUCE
+
+// .reduce() function does not return an array, it returns a single result (an aggregate)
+// we want to sum up all the numbers in an array
+const numbersToBeAddedTogether = [ 5, 5, 4, 4, 3, 6 ] // result should be 27
+
+const sum = numbersToBeAddedTogether.reduce((prev, curr) => prev + curr, 0)
+const product = numbersToBeAddedTogether.reduce((prev, curr) => prev * curr, 1)
+
+console.log(sum) // 27
+console.log(product) // 7200
+
+
+
+// #endregion
 
 
 
