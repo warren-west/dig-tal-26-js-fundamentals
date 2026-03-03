@@ -128,8 +128,6 @@ const carNameLengths = cars.map((car) => car.length)
 
 // #endregion
 
-
-
 // #region REDUCE
 
 // .reduce() function does not return an array, it returns a single result (an aggregate)
@@ -139,12 +137,42 @@ const numbersToBeAddedTogether = [ 5, 5, 4, 4, 3, 6 ] // result should be 27
 const sum = numbersToBeAddedTogether.reduce((prev, curr) => prev + curr, 0)
 const product = numbersToBeAddedTogether.reduce((prev, curr) => prev * curr, 1)
 
-console.log(sum) // 27
-console.log(product) // 7200
+// console.log(sum) // 27
+// console.log(product) // 7200
+
+
+// #endregion
+
+// #region EVERY / SOME
+
+const temperatures = [ 20, 22, 18, 6, 20, 15, 22, 12, 10 ]
+
+// Do some of the values in the array meet this condition?
+const temperaturesSome = temperatures.some((temp) => temp === -22)
+// Does every value in the array meet this condition?
+const temperaturesEvery = temperatures.every((temp) => temp > 0)
+
+// console.log(temperaturesSome)
+// console.log(temperaturesEvery)
+
+// #endregion
+
+// #region SORT
+
+
+
+
+
+
+
+
+
+
 
 
 
 // #endregion
+
 
 
 
