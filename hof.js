@@ -159,22 +159,64 @@ const temperaturesEvery = temperatures.every((temp) => temp > 0)
 
 // #region SORT
 
+const firstNames = [ 
+    { firstName: 'James', age: 20, isMarried: false },
+    { firstName: 'Warren', age: 33, isMarried: true },
+    { firstName: 'Chris', age: 24, isMarried: false },
+    { firstName: 'Oprah', age: 56, isMarried: true },
+    { firstName: 'Alice', age: 44, isMarried: true },
+]
 
+// Sorting based on a Number value
+// const peopleSortedByAge = firstNames.sort((a, b) => {
+//     return b.age - a.age
+// })
 
+// Sorting based on a String value
+// const peopleSortedByFirstname = firstNames.sort((a, b) => {
+//     // how do we deal with sorting strings on objects:
+//     return b.firstName.localeCompare(a.firstName)
+//     // "A" and "A" returns 0
+//     // "A" and "B" returns 1
+//     // "B" and "A" returns -1
+// })
 
+// Sorting based on a Boolean value:
+// const peopleSortedByMarriedStatus = firstNames.sort((a, b) => {
+//     return b.isMarried - a.isMarried
+// })
 
+// console.log(peopleSortedByAge)
+// console.log(peopleSortedByFirstname)
+// console.log(peopleSortedByMarriedStatus)
 
+// const nums = [ 5, 16, 32, 331, 5, 50, 162 ]
 
+// console.log(nums.sort()) // default sort (numbers)
+// console.log(firstNames.sort()) // default sort (string)
 
+// const sortedNumbersDesc = nums.sort((a, b) => {
+//     // we subtract the numbers from each other
+//     // to determine the difference
+//     // and decide if we want to sort them asc or desc
+//     return b - a
+// })
 
+// console.log(sortedNumbersDesc)
 
+const daysOfWeek = [
+    {day: 'Tuesday', id: 2},
+    {day: 'Thursday', id: 4},
+    {day: 'Sunday', id: 0},
+    {day: 'Friday', id: 5},
+    {day: 'Monday', id: 1},
+    {day: 'Saturday', id: 6},
+    {day: 'Wednesday', id: 3}
+]
 
-
+// console.log(daysOfWeek.sort((a, b) => b.id - a.id))
 
 // #endregion
-
-
-
 
 
 // Sidenote:
@@ -184,3 +226,23 @@ const temperaturesEvery = temperatures.every((temp) => temp > 0)
 // for (let i = 0; i < names.length; i++) {
 //     console.log(`${i}: ${names[i]}`)
 // }
+
+
+// #region Sidenote on Dates
+
+// const today = new Date(2026, 0, 10) // '10 January 2026'
+
+// console.log(today.getFullYear()) // 2026
+// console.log(today.getMonth()) // 03
+// const months = [
+//     'January',
+//     'February',
+//     'March',
+//     // ...
+// ]
+// console.log(today.getDate()) // 04
+
+// console.log(today.getDay()) // Wednesday
+
+// console.log(months[0])
+// #endregion
