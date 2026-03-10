@@ -17,6 +17,12 @@ const number3 = 12
 // Identify the arguments it needs to function
 // Wrap it inside of a function block
 
+/**
+ * A function used to sum two numbers together.
+ * @param {Number} num1 The first number.
+ * @param {Number} num2 The second number.
+ * @returns The addition of the two input numbers as a Number.
+ */
 function addTwoNumbers(num1, num2) {
     return num1 + num2
 }
