@@ -80,7 +80,7 @@ class Product {
     setName(newName) {
         this.name = newName
     }
-    
+
     // this can be described as a setter method:
     addStockValue(newStock) {
         this.stock += newStock
@@ -115,7 +115,7 @@ class Animal {
     }
     // properties
 
-    // methods
+    // methods - generic implementation / behaviors
     displayAnimalDetails() {
         return `${this.emoji} I am ${this.name}, I weigh ${this.weight}.`
     }
@@ -135,6 +135,7 @@ class Lion extends Animal {
         this.furColor = furColor
     }
 
+    // more specific implementation / behaviors
     displayAnimalDetails() {
         return `${this.emoji} I am ${this.name}, I weigh ${this.weight}, and I have ${this.furColor} fur.`
     }
@@ -161,25 +162,39 @@ const simba = new Animal("Simba", "🦁", 150)
 const zazu = new Animal("Zazu", "🦅", 3)
 
 
-console.log(simba.eat())
+// console.log(simba.eat())
 // console.log(simba.run()) these cause errors!
 // console.log(simba.fly()) these cause errors!
 
 const mufasa = new Lion("Mufasa", "🦁", 172, "Orange")
 const parakeet = new Bird("Koko", "🦜", 2, "Red")
 
-console.log(mufasa.displayAnimalDetails())
-console.log(mufasa.eat())
-console.log(mufasa.run())
+// console.log(mufasa.displayAnimalDetails())
+// console.log(mufasa.eat())
+// console.log(mufasa.run())
 
-console.log(parakeet.displayAnimalDetails())
-console.log(parakeet.eat())
-console.log(parakeet.fly())
+// console.log(parakeet.displayAnimalDetails())
+// console.log(parakeet.eat())
+// console.log(parakeet.fly())
 
-console.log(simba.displayAnimalDetails()) // Animal^
-console.log(zazu.displayAnimalDetails()) // Animal^
-console.log(mufasa.displayAnimalDetails()) // Lion*
-console.log(parakeet.displayAnimalDetails()) // Bird^
+// console.log(simba.displayAnimalDetails()) // Animal^
+// console.log(zazu.displayAnimalDetails()) // Animal^
+// console.log(mufasa.displayAnimalDetails()) // Lion*
+// console.log(parakeet.displayAnimalDetails()) // Bird^
 
-
+console.log(mufasa)
+console.log(parakeet)
 // #endregion
+
+const number = new Number(42)
+const boolean = new Boolean(false)
+const word = new String("Hello world!")
+const list = new Array([1, 2, 3, 4, 5])
+
+const doubledNumbers = list.map((num) => num * 2)
+
+console.log(number)
+console.log(boolean)
+console.log(word)
+console.log(list)
+console.log(doubledNumbers)
