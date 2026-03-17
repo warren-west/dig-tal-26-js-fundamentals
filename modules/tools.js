@@ -3,6 +3,7 @@
 // The way a default export is imported, uses different syntax
 // And there's an extra rule to pay attention to.
 export default function numberToString(n) {
+    console.log("Hello from tools.js")
     switch (n) {
         case 1:
             return "One"

@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modules in JavaScript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="app.js" type="module"></script>
+    <!-- <script src="app.js" type="module"></script> -->
+     <script type="module" src="modulePattern.js"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- module pattern section -->
+    <section class="container">
+        <h2>The Module Pattern</h2>
+        <p id="display-balance"></p>
+        <button id="btn-wages" class="btn btn-success">Earn Wages</button>
+        <button id="btn-bills" class="btn btn-danger">Pay Bills</button>
+
+    </section>
+    <!-- process numbers section -->
+    <section class="container d-none">
 
         <h2>Welcome to Modules</h2>
     
@@ -18,7 +28,7 @@
         </div>
         <button id="btn-process" class="btn btn-primary">Process number</button>
 
-    </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
